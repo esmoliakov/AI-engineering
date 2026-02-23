@@ -1,0 +1,146 @@
+[
+  {
+    "id": "q01",
+    "question": "How many days of paid time off do full-time employees receive per year?",
+    "expected_answer": "25 days of paid time off per calendar year, in addition to public holidays.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q02",
+    "question": "What is the maximum number of remote work days per week allowed under the current policy?",
+    "expected_answer": "Employees may work remotely up to 3 days per week, subject to manager approval.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q03",
+    "question": "What is the one-time home office setup allowance for remote workers?",
+    "expected_answer": "€500, available once per employee for ergonomic furniture, monitors, keyboards and similar equipment.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q04",
+    "question": "What is the annual professional development budget for full-time employees?",
+    "expected_answer": "€2,000 per year, which can be used for online courses, certifications, conferences, books, and language courses.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q05",
+    "question": "How long does NovaTech's onboarding program run for new employees?",
+    "expected_answer": "90 calendar days, consisting of three phases: pre-boarding, first two weeks, and months 1-3.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q06",
+    "question": "What is the response time for a Critical severity support issue on the Enterprise tier?",
+    "expected_answer": "15 minutes.",
+    "source_document": "product_guide.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q07",
+    "question": "What is NovaTech's policy on business class flights?",
+    "expected_answer": "Business class requires VP-level pre-approval and is generally reserved for C-level executives and client-facing travel where the flight exceeds 8 hours.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "easy",
+    "type": "factual"
+  },
+  {
+    "id": "q08",
+    "question": "Compare the Professional and Enterprise support tiers in terms of support channels and response times.",
+    "expected_answer": "Professional offers email and live chat during business hours (06:00-22:00 CET Mon-Fri), with critical issue response in 1 hour. Enterprise offers 24/7 phone, live chat, email, and a dedicated support manager, with critical issue response in 15 minutes.",
+    "source_document": "product_guide.pdf",
+    "difficulty": "medium",
+    "type": "comparison"
+  },
+  {
+    "id": "q09",
+    "question": "What were the key reasons NovaTech chose HubSpot over Salesforce as their CRM?",
+    "expected_answer": "HubSpot had a lower 3-year TCO (€385K vs €780K for Salesforce), faster implementation (6-8 weeks vs 4-6 months), and was considered sufficient for NovaTech's current scale.",
+    "source_document": "meeting_notes.pdf",
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q10",
+    "question": "What is NovaTech's ARR as of Q1 2026 and how does it compare to Q1 2025?",
+    "expected_answer": "ARR reached €18.2M at Q1 2026, up 23% year-over-year from €14.8M at Q1 2025.",
+    "source_document": "quarterly_report_q1_2026.pdf",
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q11",
+    "question": "What security training requirements apply to new employees and how does this differ for those with access to sensitive data?",
+    "expected_answer": "All employees must complete Information Security Awareness training within 30 days of joining and annually thereafter. Employees with access to Confidential or Restricted data must additionally complete the Advanced Data Handling module.",
+    "source_document": "security_policy.pdf",
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q12",
+    "question": "What changes to the remote work policy were discussed in the March 2026 leadership meeting and when do they take effect?",
+    "expected_answer": "The policy was updated to allow up to 4 days remote per week with Tuesday as the only mandatory in-office day, effective Q3 2026. Department heads may set additional in-office requirements with HR approval.",
+    "source_document": "meeting_notes.pdf",
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q13",
+    "question": "What is the NovaTech Copilot initiative and what is the total approved budget?",
+    "expected_answer": "NovaTech Copilot is an AI-powered assistant embedded in ProjectHub for task prioritization, status summarization, risk identification, and natural-language querying. It uses locally hosted LLMs for data privacy. The approved budget is €1.2M, with a beta target of Q4 2026 and GA in Q1 2027.",
+    "source_document": "meeting_notes.pdf",
+    "difficulty": "medium",
+    "type": "synthesis"
+  },
+  {
+    "id": "q14",
+    "question": "A new employee is struggling with a sensitive workplace issue they don't want to raise with their manager. What formal and informal channels does NovaTech offer them?",
+    "expected_answer": "They can speak with their onboarding buddy informally (who must maintain confidentiality), submit a formal grievance via the NovaHR portal, or report anonymously through the NovaTrust Reporting Line at trust@novatech-solutions.com.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "hard",
+    "type": "reasoning"
+  },
+  {
+    "id": "q15",
+    "question": "If a security incident is discovered involving unauthorized access to customer payment data, what are the required notification timelines and who must be notified?",
+    "expected_answer": "This is a P1 Critical incident. The CEO, General Counsel, and Board Security Committee must be notified within 1 hour. The DPO and General Counsel must be notified within 2 hours of breach confirmation. The supervisory authority must be notified within 72 hours under GDPR. Affected individuals must be notified within 7 days. Customers must receive an initial notification within 4 hours of confirmation.",
+    "source_document": "security_policy.pdf",
+    "difficulty": "hard",
+    "type": "reasoning"
+  },
+  {
+    "id": "q16",
+    "question": "If an employee works remotely from a different country for 10 consecutive days, what must they do and why?",
+    "expected_answer": "They must get prior approval from HR at least 4 weeks in advance, because working from a different country for more than 5 consecutive business days has tax and social security implications.",
+    "source_document": "company_handbook.pdf",
+    "difficulty": "hard",
+    "type": "reasoning"
+  },
+  {
+    "id": "q17",
+    "question": "What is NovaTech's maternity or paternity leave policy?",
+    "expected_answer": "The documents do not contain specific maternity or paternity leave details. The handbook only states parental leave is per local statutory requirements with HR notification at least 8 weeks before the expected start date.",
+    "source_document": null,
+    "difficulty": "hard",
+    "type": "unanswerable"
+  },
+  {
+    "id": "q18",
+    "question": "What is the salary range for software engineers at NovaTech?",
+    "expected_answer": "The documents do not contain information about salary ranges for specific roles.",
+    "source_document": null,
+    "difficulty": "hard",
+    "type": "unanswerable"
+  }
+]

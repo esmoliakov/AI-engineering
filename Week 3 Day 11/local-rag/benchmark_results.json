@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "run_timestamp": "2026-02-23T15:24:26",
+    "models": [
+      "qwen3:8b",
+      "phi4-mini:latest"
+    ],
+    "temperature": 0.7,
+    "num_prompts": 7
+  },
+  "summary": {
+    "qwen3:8b": {
+      "avg_time_seconds": 65.32,
+      "avg_tokens_per_second": 28.1,
+      "prompts_run": 7
+    },
+    "phi4-mini:latest": {
+      "avg_time_seconds": 5.32,
+      "avg_tokens_per_second": 27.6,
+      "prompts_run": 7
+    }
+  },
+  "results": [
+    {
+      "model": "qwen3:8b",
+      "response": "Tides on Earth are primarily caused by the gravitational pull of the Moon and, to a lesser extent, the Sun. The Moon's gravity creates bulges in Earth's oceans, leading to high and low tides as Earth rotates. The Sun's influence adds to this effect, sometimes enhancing or reducing tidal ranges depending on alignment.",
+      "time_seconds": 119.78,
+      "prompt_tokens": 25,
+      "completion_tokens": 236,
+      "tokens_per_second": 2.0,
+      "category": "factual",
+      "prompt": "What causes tides on Earth? Answer in 2-3 sentences.",
+      "quality_rating": 5
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "To determine the **average speed** for the entire journey, we use the formula:\n\n$$\n\\text{Average Speed} = \\frac{\\text{Total Distance}}{\\text{Total Time}}\n$$\n\n---\n\n### Step 1: Calculate Total Distance\n\nThe train travels two segments:\n\n- First segment: 120 km\n- Second segment: 80 km\n\n$$\n\\text{Total Distance} = 120\\, \\text{km} + 80\\, \\text{km} = 200\\, \\text{km}\n$$\n\n---\n\n### Step 2: Calculate Total Time\n\n- First segment: 1.5 hours\n- Second segment: 1 hour\n\n$$\n\\text{Total Time} = 1.5\\, \\text{hours} + 1\\, \\text{hour} = 2.5\\, \\text{hours}\n$$\n\n---\n\n### Step 3: Calculate Average Speed\n\n$$\n\\text{Average Speed} = \\frac{200\\, \\text{km}}{2.5\\, \\text{hours}} = 80\\, \\text{km/h}\n$$\n\n---\n\n### Final Answer\n\n$$\n\\boxed{80}\n$$ km/h is the average speed for the entire journey.",
+      "time_seconds": 118.37,
+      "prompt_tokens": 51,
+      "completion_tokens": 1089,
+      "tokens_per_second": 9.2,
+      "category": "reasoning",
+      "prompt": "If a train travels 120km in 1.5 hours, and then 80km in 1 hour, what is the average speed for the entire journey? Show your work.",
+      "quality_rating": 5
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "Airplanes are fixed-wing aircraft that generate lift through aerodynamic wing design, enabling powered flight through the atmosphere. Modern commercial planes typically use jet engines, while smaller aircraft may rely on propellers, serving diverse purposes like passenger transport, cargo, military operations, and research. The Wright brothers' 1903 flight marked the beginning of aviation, leading to rapid technological advancements in the 20th and 21st centuries. Today\u2019s long-haul aircraft can travel thousands of kilometers with advanced navigation, autopilot, and safety systems.",
+      "time_seconds": 9.74,
+      "prompt_tokens": 166,
+      "completion_tokens": 340,
+      "tokens_per_second": 34.9,
+      "category": "summarization",
+      "prompt": "Summarize the following in 3\u20134 sentences: Airplanes are fixed-wing aircraft designed for powered flight through the atmosphere. They generate lift primarily through the movement of air over their wings, which are shaped to create differences in air pressure. Modern commercial airplanes are typically powered by jet engines, while smaller aircraft may use propellers. Airplanes are used for passenger transport, cargo shipment, military operations, scientific research, and firefighting. The first successful powered flight was achieved by the Wright brothers in 1903, leading to rapid advancements in aviation technology throughout the 20th and 21st centuries. Today\u2019s long-haul aircraft can travel thousands of kilometers nonstop and are equipped with advanced navigation systems, autopilot capabilities, and sophisticated safety mechanisms.",
+      "quality_rating": 5
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "[{\"city\": \"Paris\", \"country\": \"France\", \"population_millions\": 2.1}, {\"city\": \"Berlin\", \"country\": \"Germany\", \"population_millions\": 3.7}, {\"city\": \"London\", \"country\": \"United Kingdom\", \"population_millions\": 8.9}]",
+      "time_seconds": 35.94,
+      "prompt_tokens": 54,
+      "completion_tokens": 1544,
+      "tokens_per_second": 43.0,
+      "category": "structured_output",
+      "prompt": "List 3 European capitals with their population (approximate). Respond ONLY with valid JSON, no extra text: [{\"city\": \"...\", \"country\": \"...\", \"population_millions\": 0.0}]",
+      "quality_rating": 5
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "Here's a well-structured and documented Python function that splits a given string into overlapping chunks of a specified size, with a defined overlap between consecutive chunks. The function ensures that each chunk has a specified number of overlapping characters with the previous one, and handles edge cases like when the remaining text is shorter than the chunk size.\n\n---\n\n### \u2705 **Function Purpose**\nThe `chunk_text` function takes a string and splits it into overlapping segments. Each segment (chunk) overlaps with the previous one by a specified number of characters. This is useful in applications like text analysis, sliding window algorithms, etc.\n\n---\n\n### \ud83d\udccc **Parameters**\n- `text`: The input string to be split.\n- `chunk_size`: The size of each chunk.\n- `overlap`: The number of characters by which each chunk overlaps with the previous one.\n\n---\n\n### \ud83d\udd01 **Example Usage**\n```python\nresult = chunk_text(\"abcdefgh\", 3, 1)\nprint(result)\n```\n\n**Output:**\n```\n['abc', 'bcd', 'def', 'gh']\n```\n\nEach chunk overlaps the previous one by one character (e.g., `'abc'` overlaps with `'bcd'` by `'bc'`), and the last chunk is `'gh'` which is shorter than the chunk size.\n\n---\n\n### \ud83e\udde0 **How It Works**\n- The function initializes an empty list to store the chunks.\n- It starts at the beginning of the string (`start = 0`) and creates a chunk by slicing from `start` to `start + chunk_size`.\n- The `start` is then incremented by `(chunk_size - overlap)` to ensure the next chunk overlaps with the current one.\n- The process continues until the entire string is processed.\n\n\u05d2\u05d5\u05e8\u05dd:\n\n```python\ndef chunk_text(text, chunk_size, overlap):\n    \"\"\"\n    Splits the input text into overlapping chunks of specified size.\n    \n    Parameters:\n    text (str): The input string to be split.\n    chunk_size (int): The size of each chunk.\n    overlap (int): The number of characters by which each chunk overlaps with the previous one.\n    \n    Returns:\n    list: A list of overlapping chunks.\n    \n    Example:\n    >>> chunk_text(\"abcdefgh\", 3, 1)\n    ['abc', 'bcd', 'def', 'gh']\n    \"\"\"\n    chunks = []\n    start = 0\n    while start < len(text):\n        chunk = text[start:start + chunk_size]\n        chunks.append(chunk)\n        start += (chunk_size - overlap)\n    return chunks\n```\n\n---\n\n### \u26a0\ufe0f **Important Notes**\n- The function assumes `chunk_size > overlap` to avoid an infinite loop or invalid chunk sizes.\n- If `chunk_size == overlap`, the function will only return a single chunk (since all characters are considered overlapping).\n- The function gracefully handles the case where the remaining text is shorter than the chunk size by returning the last partial chunk.\n\n---\n\n### \ud83d\udce6 **Use Case Example**\nA simple use case is analyzing text with a sliding window for pattern recognition, NLP, or data processing where overlapping segments are needed.\n\n```python\n# Analyze text with 3-character chunks and 1-character overlap\nresult = chunk_text(\"abcdefgh\", 3, 1)\nfor chunk in result:\n    print(chunk)\n```\n\n**Output:**\n```\nabc\nbcd\ndef\ngh\n```\n\n---\n\n### \u2705 Summary\nThis function provides a clean and efficient way to split a string into overlapping chunks, with control over how much each chunk overlaps with the previous one. It's versatile and can be adapted for various applications where overlapping segments are required.",
+      "time_seconds": 152.22,
+      "prompt_tokens": 45,
+      "completion_tokens": 6491,
+      "tokens_per_second": 42.6,
+      "category": "code_generation",
+      "prompt": "Write a Python function called `chunk_text(text, chunk_size, overlap)` that splits a string into overlapping chunks. Include a docstring and a usage example in a comment.",
+      "quality_rating": 4
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "1. Local LLM deployment ensures data privacy by keeping sensitive information within the organization's infrastructure.  \n2. It reduces dependency on internet connectivity, minimizing latency and ensuring consistent performance.  \n3. Organizations gain full control over model customization and parameter tuning without relying on third-party services.  \n4. It can significantly lower long-term costs compared to ongoing cloud API subscription fees.",
+      "time_seconds": 10.0,
+      "prompt_tokens": 48,
+      "completion_tokens": 323,
+      "tokens_per_second": 32.3,
+      "category": "instruction_following",
+      "prompt": "List exactly 4 benefits of local LLM deployment over cloud APIs. Format your response as a numbered list. Each item must be exactly one sentence. Do not include any introduction or conclusion.",
+      "quality_rating": 5
+    },
+    {
+      "model": "qwen3:8b",
+      "response": "Under Lithuania's National Education Framework, students have the following rights:  \n1. \"Students are entitled to free primary and secondary education in public schools.\"  \n2. \"Students have the right to receive information about their academic evaluation and to appeal final exam results.\"  \n\nThe mention of a Student Ombudsperson applies to schools with more than 500 students and is not explicitly a student right.",
+      "time_seconds": 11.19,
+      "prompt_tokens": 142,
+      "completion_tokens": 365,
+      "tokens_per_second": 32.6,
+      "category": "rag_simulation",
+      "prompt": "You MUST answer using ONLY the information provided in the CONTEXT below. Do not use prior knowledge. If the answer is not explicitly stated in the context, say 'Not found in context.'\n\nCONTEXT:\nLithuania's National Education Framework establishes that students are entitled to free primary and secondary education in public schools. Students have the right to receive information about their academic evaluation and to appeal final exam results. Schools with more than 500 students must appoint a Student Ombudsperson.\n\nQUESTION:\nBased only on the CONTEXT above, what rights do students have under Lithuania's National Education Framework? In your answer, explicitly quote the relevant sentence from the CONTEXT.",
+      "quality_rating": 4
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "Tides are primarily caused by the gravitational pull of both the Moon and, to a lesser extent, the Sun pulling on Earth's oceans. The interaction between these forces results in periodic rises (high tide) and falls (low tide). Additionally, factors such as coastline shape can also influence local tidal patterns.",
+      "time_seconds": 12.18,
+      "prompt_tokens": 17,
+      "completion_tokens": 61,
+      "tokens_per_second": 5.0,
+      "category": "factual",
+      "prompt": "What causes tides on Earth? Answer in 2-3 sentences.",
+      "quality_rating": 5
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "To find the total distance traveled during this trip we add up both distances: \n\nTotal Distance = First Leg + Second Leg\n                     = (120 km) + (80 km)\n                     = 200 km\n\nNext we'll need to calculate how much time was spent traveling on each leg of our journey:\n\nTime Spent Traveling On Each Leg:\nFirst Leg Time             = 1.5 hours \nSecond Leg Time            = 1 hour \n\nTotal Travel Time          = First Leg Time + Second Leg Time\n                             = (1.5) + (1)\n                             = 2.5 hours\n\nNow that we have both the total distance and time spent on our trip, we'll use these figures to calculate average speed as follows:\n\nAverage Speed = Total Distance / Total Time Spent Traveling \n                           = (200 km) / (2.5 hrs)\n\nTherefore,\n\nAverage Speed \u2248 80 km/h \n\nThe train's overall mean velocity for this journey is approximately 80 kilometers per hour.",
+      "time_seconds": 4.68,
+      "prompt_tokens": 41,
+      "completion_tokens": 200,
+      "tokens_per_second": 42.7,
+      "category": "reasoning",
+      "prompt": "If a train travels 120km in 1.5 hours, and then 80km in 1 hour, what is the average speed for the entire journey? Show your work.",
+      "quality_rating": 5
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "Airplanes consist of fixed-wing designs primarily powered by jet engines or propellers for flight through air; they create lift via wing shapes altering pressure differences when moving against the atmosphere's resistance during transit at high altitudes utilizing modern aviation technology developed since 1903 to enable long-range travels with advanced navigation, autopilots and safety systems.",
+      "time_seconds": 3.35,
+      "prompt_tokens": 154,
+      "completion_tokens": 68,
+      "tokens_per_second": 20.3,
+      "category": "summarization",
+      "prompt": "Summarize the following in 3\u20134 sentences: Airplanes are fixed-wing aircraft designed for powered flight through the atmosphere. They generate lift primarily through the movement of air over their wings, which are shaped to create differences in air pressure. Modern commercial airplanes are typically powered by jet engines, while smaller aircraft may use propellers. Airplanes are used for passenger transport, cargo shipment, military operations, scientific research, and firefighting. The first successful powered flight was achieved by the Wright brothers in 1903, leading to rapid advancements in aviation technology throughout the 20th and 21st centuries. Today\u2019s long-haul aircraft can travel thousands of kilometers nonstop and are equipped with advanced navigation systems, autopilot capabilities, and sophisticated safety mechanisms.",
+      "quality_rating": 2
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "```json\n\n[{\"city\": \"Paris\", \"country\": \"France\", \"population_millions\": 2.1}, \n\n {\"city\": \"Berlin\", \"country\": \"Germany\", \"population_millions\": 3.6}, \n\n {\"city\": \"Madrid\", \"country\": \"Spain\", \"population_millions\": 3.0}]\n\n```",
+      "time_seconds": 3.46,
+      "prompt_tokens": 46,
+      "completion_tokens": 78,
+      "tokens_per_second": 22.6,
+      "category": "structured_output",
+      "prompt": "List 3 European capitals with their population (approximate). Respond ONLY with valid JSON, no extra text: [{\"city\": \"...\", \"country\": \"...\", \"population_millions\": 0.0}]",
+      "quality_rating": 4
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "```python\ndef chunk_text(text, chunk_size, overlap):\n    \"\"\"\n    Splits the input text into overlapping chunks.\n\n    Parameters:\n        text (str): The original string to be split.\n        chunk_size (int): Size of each chunk before considering overlaps.\n        overlap (int): Number of characters that should remain in common between consecutive chunks.\n\n    Returns:\n        List[str]: A list containing all possible overlapping chunks from the input text.\n    \n    Example usage:\n    >>> result = chunk_text(\"abcdefgh\", 3, 1)\n    >>> print(result) # Output: ['abc', 'bcd', 'cde', 'def', 'efg']\n    \"\"\"\n    if overlap >= chunk_size or len(text) < (chunk_size - overlap):\n        return []\n\n    chunks = []\n    for i in range(len(text) - chunk_size + 1):\n        start_index = max(i, i + overlap)\n        end_index = min(start_index + chunk_size, len(text))\n        while end_index <= len(text) and text[start_index:end_index] not in chunks:\n            chunks.append(text[start_index:end_index])\n            if end_index < len(text):  # Continue to add overlapping parts\n                start_index += (end_index - i)\n    \n    return list(set(chunks))  # Remove duplicates\n\n# Example usage commented out for readability.\n```\nIn this function, `chunk_text` takes a string input and divides it into chunks of specified size while allowing an overlap between consecutive segments. The resulting overlapping chunks are returned as unique elements in the output list to avoid redundancy.",
+      "time_seconds": 6.45,
+      "prompt_tokens": 38,
+      "completion_tokens": 325,
+      "tokens_per_second": 50.4,
+      "category": "code_generation",
+      "prompt": "Write a Python function called `chunk_text(text, chunk_size, overlap)` that splits a string into overlapping chunks. Include a docstring and a usage example in a comment.",
+      "quality_rating": 3
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "1. Reduced latency due to proximity.\n2. Enhanced privacy and data security measures locally managed by the organization itself.\n3. Lower operational costs associated with reduced bandwidth usage for internet connections compared to cloud APIs over long distances, especially in rural areas without reliable high-speed connectivity.\n4. Local deployment can avoid potential downtime from global server outages or maintenance periods affecting third-party services used through cloud APIs.",
+      "time_seconds": 3.36,
+      "prompt_tokens": 41,
+      "completion_tokens": 79,
+      "tokens_per_second": 23.5,
+      "category": "instruction_following",
+      "prompt": "List exactly 4 benefits of local LLM deployment over cloud APIs. Format your response as a numbered list. Each item must be exactly one sentence. Do not include any introduction or conclusion.",
+      "quality_rating": 4
+    },
+    {
+      "model": "phi4-mini:latest",
+      "response": "Students are entitled to free primary and secondary education in public schools (\"Lithuania's National Education Framework establishes that students are entitled to free primary and secondary education in public schools.\") Students also have the right to receive information about their academic evaluation and can appeal final exam results (\"Students...have the right to receive information about their academic evaluation and to appeal final exam results.\"). Schools with more than 500 students must appoint a Student Ombudsperson (\"Schools with more than 500 students must appoint a Student Ombudsperson.\")",
+      "time_seconds": 3.76,
+      "prompt_tokens": 136,
+      "completion_tokens": 107,
+      "tokens_per_second": 28.5,
+      "category": "rag_simulation",
+      "prompt": "You MUST answer using ONLY the information provided in the CONTEXT below. Do not use prior knowledge. If the answer is not explicitly stated in the context, say 'Not found in context.'\n\nCONTEXT:\nLithuania's National Education Framework establishes that students are entitled to free primary and secondary education in public schools. Students have the right to receive information about their academic evaluation and to appeal final exam results. Schools with more than 500 students must appoint a Student Ombudsperson.\n\nQUESTION:\nBased only on the CONTEXT above, what rights do students have under Lithuania's National Education Framework? In your answer, explicitly quote the relevant sentence from the CONTEXT.",
+      "quality_rating": 4
+    }
+  ]
+}
