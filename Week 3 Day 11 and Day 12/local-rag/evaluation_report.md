@@ -46,5 +46,14 @@ The local RAG pipeline generates high quality, faithful answers. Its main weakne
 1. Retrieval. Reduce chunk size to 256 tokens and add a reranker to improve precision without sacrificing recall on complex questions. At current chunk size (512) and top-k (10), the local model is too slow and too noisy for production use.
 2. The pipeline is vulnerable to document injection, a malicious file can override some instructions. For production, sanitize all ingested documents, restrict answers to retrieved context, and detect prompt injection in documents and queries.
 3. Running local model on better/more GPUs could cut response time gradually. Also would experiment with other, smaller local models, a bit smaller chunks sizes and topk.
+
+## Insights on LLM-as-Judge
+
+Bias and Misclassification – Judges sometimes labeled clearly relevant context as idk or no.
+Example: The statement about a €500 home office allowance was marked idk, even though it fully answers the question.
+
+idk Signals Uncertainty – idk often appears when context is partially relevant or supportive but not the main answer.
    
+Scoring Impact – idk can lower metrics even when the output is correct, since judges treat uncertainty as missing or unsupported evidence.
+
 **Side note:** I tried running on chunk size 256 and topk 5 which was much much quicker, but I was not satisfied with the correctness of the medium to hard questions, bigger chunk size and topk meant response was slower, easier questions were at risk but harder questions had improved correctness. This is a classic precision vs recall tradeoff.
