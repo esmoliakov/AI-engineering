@@ -65,16 +65,16 @@
   },
   {
     "id": "q09",
-    "question": "What were the key reasons NovaTech chose HubSpot over Salesforce as their CRM?",
-    "expected_answer": "HubSpot had a lower 3-year TCO (€385K vs €780K for Salesforce), faster implementation (6-8 weeks vs 4-6 months), and was considered sufficient for NovaTech's current scale.",
+    "question": "The company handbook states the remote work policy allows 3 days per week. Is this still accurate as of March 2026, and what is changing?",
+    "expected_answer": "No, it is outdated. The March 2026 leadership meeting decided to update the policy to 4 days remote per week effective Q3 2026, with Tuesday as the only mandatory in-office day.",
     "source_document": "meeting_notes.pdf",
     "difficulty": "medium",
     "type": "synthesis"
   },
   {
     "id": "q10",
-    "question": "What is NovaTech's ARR as of Q1 2026 and how does it compare to Q1 2025?",
-    "expected_answer": "ARR reached €18.2M at Q1 2026, up 23% year-over-year from €14.8M at Q1 2025.",
+    "question": "By what amount in euros did NovaTech's ARR grow between Q1 2025 and Q1 2026?",
+    "expected_answer": "ARR grew by €3.4M, from €14.8M in Q1 2025 to €18.2M in Q1 2026.",
     "source_document": "quarterly_report_q1_2026.pdf",
     "difficulty": "medium",
     "type": "synthesis"
@@ -89,24 +89,24 @@
   },
   {
     "id": "q12",
-    "question": "What changes to the remote work policy were discussed in the March 2026 leadership meeting and when do they take effect?",
-    "expected_answer": "The policy was updated to allow up to 4 days remote per week with Tuesday as the only mandatory in-office day, effective Q3 2026. Department heads may set additional in-office requirements with HR approval.",
+    "question": "What two product issues affected Enterprise customers in Q1 2026 and how were they resolved?",
+    "expected_answer": "The advanced reporting module had performance problems for customers with over 50,000 tasks, with a fix targeting February 20. Three Enterprise accounts totaling €420K ARR flagged potential non-renewal.",
     "source_document": "meeting_notes.pdf",
     "difficulty": "medium",
     "type": "synthesis"
   },
   {
     "id": "q13",
-    "question": "What is the NovaTech Copilot initiative and what is the total approved budget?",
-    "expected_answer": "NovaTech Copilot is an AI-powered assistant embedded in ProjectHub for task prioritization, status summarization, risk identification, and natural-language querying. It uses locally hosted LLMs for data privacy. The approved budget is €1.2M, with a beta target of Q4 2026 and GA in Q1 2027.",
-    "source_document": "meeting_notes.pdf",
+    "question": "NovaTech Copilot appears in both the meeting notes and the quarterly report. What detail does the quarterly report mention that the meeting notes do not?",
+    "expected_answer": "The quarterly report mentions that Copilot is being led by a dedicated 8-person team in the Lisbon office, with an internal alpha targeted for July 2026 and customer beta in September 2026.",
+    "source_document": "quarterly_report_q1_2026.pdf",
     "difficulty": "medium",
     "type": "synthesis"
   },
   {
     "id": "q14",
-    "question": "A new employee is struggling with a sensitive workplace issue they don't want to raise with their manager. What formal and informal channels does NovaTech offer them?",
-    "expected_answer": "They can speak with their onboarding buddy informally (who must maintain confidentiality), submit a formal grievance via the NovaHR portal, or report anonymously through the NovaTrust Reporting Line at trust@novatech-solutions.com.",
+    "question": "An employee has been at NovaTech for 4 years and wants to take a sabbatical. Are they eligible, and what approval do they need?",
+    "expected_answer": "No, they are not eligible. Sabbatical is available only after 5 years of continuous employment, and requires VP-level approval. The employee needs one more year before they can apply.",
     "source_document": "company_handbook.pdf",
     "difficulty": "hard",
     "type": "reasoning"

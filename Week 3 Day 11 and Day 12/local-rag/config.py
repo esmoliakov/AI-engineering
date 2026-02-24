@@ -13,7 +13,7 @@ EMBEDDING_BASE_URL = os.getenv("EMBEDDING_BASE_URL", "http://localhost:11434/v1"
 # --- Retrieval ---
 CHUNK_SIZE = 512
 CHUNK_OVERLAP = 50
-TOP_K = 5
+TOP_K = 10
 COLLECTION_NAME = "bootcamp_docs"
 
 # --- Generation ---

@@ -12,11 +12,11 @@
 ## Chunking Strategy
 - **Chunk size:** 512
 - **Overlap:** 50
-- **Why:** Experimented with 256 and 512. No meaningful difference in answer quality. Stuck with 512 since it preserves more context per chunk, which may helps at some new untested questions.
-
+- **Why:** Experimented with 256, 512 and 1024. 256 was too small, it split related content mid sentence. 1024 threw some off topic answers. 512 offered the best balance, it kept context in one chunk and answers were precise.
+  
 ## Retrieval Configuration
-- **Top-K:** 5
-- **Why:** With 8 more irrelevant chunks were retrieved without improving answers. 5 was enough for most questions.
+- **Top-K:** 10
+- **Why:** With 5 some questions that required synthesizing information from multiple chunks were failing because relevant chunks were not in the top 5. I increased to 10 which provided a larger candidate pool where the correct answers could be found.
 
 ## Observations
 - **What worked well:** Examples below
