@@ -1,0 +1,27 @@
+{
+  "execution_summary": {
+    "start_time": "2026-02-26T16:49:15.305575",
+    "end_time": "2026-02-26T16:49:41.604746",
+    "duration_seconds": 26.3,
+    "total_events": 2
+  },
+  "events": [
+    {
+      "timestamp": "2026-02-26T16:49:15.305575",
+      "event_type": "CREW_START",
+      "agent": "System",
+      "details": {
+        "message": "Crew execution started"
+      }
+    },
+    {
+      "timestamp": "2026-02-26T16:49:41.604745",
+      "event_type": "CREW_END",
+      "agent": "System",
+      "details": {
+        "message": "Crew execution completed",
+        "duration_seconds": 26.3
+      }
+    }
+  ]
+}
